@@ -374,11 +374,6 @@ li {
 .desc .swiper-slide {
   height: 100%;
 }
-.desc .swiper-slide.swiper-slide-next img {
-  margin-bottom: 20px;
-  margin-top: 0;
-  bottom: 15px;
-}
 .desc .swiper-button-next, .desc .swiper-button-prev {
   top: 280px;
   width: 58px;
@@ -628,16 +623,19 @@ li {
   bottom: 0;
 }
 .model__card-item {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #737474;
   position: relative;
-  padding: 7.5px 0;
+  padding: 6.5px 0;
 }
 .model__card-item span:first-child {
   color: #202021;
   font-family: var(--bold);
+}
+.model__card-item strong {
+  color: #000;
 }
 .model__card-item::before {
   position: absolute;
@@ -924,19 +922,9 @@ li {
   width: 4px;
   height: 6px;
   background: url(../images/triangle_white.png);
-  right: 45px;
+  right: 35px;
   top: 50%;
   transform: translateY(-50%);
-}
-.calc__btn:last-child {
-  color: #005e92;
-  background-color: #ffffff;
-  background-image: linear-gradient(-7deg, #f2f2f2 51%, #f0f0f0 44%, #f2f2f2 47%, #f7f7f7 58%, #f9f9f9 50%);
-  margin-left: 33px;
-}
-.calc__btn:last-child::after {
-  background: url(../images/triangle_blue.png);
-  right: 36px;
 }
 .calc__result span {
   font-size: 36px;
@@ -973,7 +961,7 @@ li {
   margin-top: 67px;
   padding-bottom: 40px;
 }
-.why .swiper-slide:nth-child(odd) img {
+.why .swiper-slide img {
   margin-top: 20px;
 }
 .why .swiper-button-next, .why .swiper-button-prev {
@@ -1248,6 +1236,7 @@ li {
 }
 .cities__marks-item {
   position: relative;
+  margin: 0px 37.5px;
 }
 .cities__marks-item::before {
   content: "";
@@ -1265,14 +1254,8 @@ li {
 .cities__marks-item:nth-child(1)::before {
   background-image: url(../images/ellipse_yellow.png);
 }
-.cities__marks-item:nth-child(2) {
-  margin: 0px 75px;
-}
 .cities__marks-item:nth-child(2)::before {
   background-image: url(../images/ellipse_green.png);
-}
-.cities__marks-item:nth-child(3)::before {
-  background-image: url(../images/ellipse_blue.png);
 }
 .cities__buttons {
   margin-top: 69px;
@@ -2479,4 +2462,34 @@ li {
   .footer .fz-18 {
     font-size: 10px;
   }
+}
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  opacity: 0.7;
+  z-index: 100;
+  display: none;
+}
+
+.modal-form {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 101;
+}
+.modal-form__img {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 102;
+  width: 20px;
+}
+.modal-form__img:hover {
+  opacity: 0.7;
 }
